@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Gestion de cuve</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+    <header>
+        <button onclick="affMenu(1)">Enregistrer un transfert de cuve</button>
+        <button onclick="affMenu(2)">Enregistrer un apport de vendanges</button>
+        <button onclick="affMenu(3)">Enregistrer une mise en bouteille</button>
+        <button onclick="affMenu(4)">Enregistrer une sortie lie</button>
+        <button onclick="affMenu(5)">Enregistrer un ajout d'intrant</button>
+    </header>
+    <form id="menu1"><p>Date du transfert</p><input type="date" required><p>Cuve de départ</p><input type="text" maxlength="2" required><p>Volume transféré [HI]</p><input type="number" required><p>Cuve d'arrivée</p><input type="text" maxlength="2" required><input type="submit" id="transfertButton" value="valider"></form>
+    <form id="menu2"><p>Date d'appport</p><input type="date" required><p>Parcelle</p><input type="text" required><p>Quantité [kg]</p><input type="number" required><p>Cuve apport</p><input type="text" maxlength="2" required><p>Appelation</p><input type="text" required><p>Cépage</p><input type="text" required><input type="submit" id="apportButton" value="valider"></form>
+    <form id="menu3"><p>Date du transfert</p><input type="date" required><p>Cuve de départ</p><input type="text" maxlength="2" required><p>Volume transféré [HI]</p><input type="number" required><p>Numéro de lot</p><input type="number"><input type="submit" id="miseEnBouteilleButton" value="valider"></form>
+    <form id="menu4"><p>Date du transfert</p><input type="date" required><p>Cuve de départ</p><input type="text" maxlength="2" required><p>Volume transféré [HI]</p><input type="number" required><input type="submit" id="lieButton" value="valider"></form>
+    <form id="menu5"><p>Date d'appport</p><input type="date" required><p>Cuve d'apport</p><input type="text" maxlength="2" required><p>Libellé de l'intrant : Nom/Prénom</p><input type="text" required><p>Quantité apportée [HI]</p><input type="number" required><input type="submit" id="intrantButton" value="valider"></form>
+    <main>
+        <div class="cuves" id="I0"><p>I0</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation">sirra</p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I1"><p>I1</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I2"><p>I2</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I3"><p>I3</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I4"><p>I4</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I5"><p>I5</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I6"><p>I6</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I7"><p>I7</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I8"><p>I8</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I9"><p>I9</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I10"><p>I10</p>pv><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="I11"><p>I11</p>pv><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="F1"><p>F1</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="F2"><p>F2</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="F3"><p>F3</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="F4"><p>F4</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="F5"><p>F5</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="F6"><p>F6</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="F7"><p>F7</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="F8"><p>F8</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="F9"><p>F9</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B1"><p>B1</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B2"><p>B2</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B3"><p>B3</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B4"><p>B4</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B5"><p>B5</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B6"><p>B6</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B7"><p>B7</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B8"><p>B8</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B9"><p>B9</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B10"><p>B10</p>pv><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="B11"><p>B11</p>pv><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+        <div class="cuves" id="C1"><p>C1</p><div class="fill_indicator"><div class="rate"></div></div><div class="appelation"><div class='titre'>Appelation</div><p class="textAppelation"></p><div class='titre'>Millesime</div><p class="textMillesime"></p><div class='titre'>Cépage</div><p class="textCépage"></p></div></div>
+    </main>
+    </body>
+    <script>
+        function affMenu(nmbr) {
+            if (document.getElementById(`menu${nmbr}`).style.display == '') {
+                for (let i = 1; i <= 5; i++) {
+                    document.getElementById(`menu${i}`).style.display = null
+                }
+                document.getElementById(`menu${nmbr}`).style.display = 'flex'
+            } else {
+                document.getElementById(`menu${nmbr}`).style.display = null
+            }
+        }
+
+        console.log(document.forms['menu1'].elements["form-info"].value)
+    </script>
+</html>
